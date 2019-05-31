@@ -11,6 +11,7 @@ import java.io.IOException;
 public class App {
     String filePath = "./src/main/resources/LAND2.BMP";
 
+
     public void transformImageByColor(int rgbTobeChangedTo) {
         BufferedImage img = null;
         try {
@@ -61,10 +62,59 @@ public class App {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void transformImgDotMatrix(int rgbToSetDotMatrix){
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File(filePath));
+            int height = img.getHeight();
+            int width = img.getWidth();
+
+            for(int h = 0; h < height; h++){
+                for(int w = 0; w < width; w++){
+                    if(h % 10 == 0 && w % 10 == 0){
+                        img.setRGB(w, h, rgbToSetDotMatrix);
+                    }
+                }
+            }
+            ImageIO.write(img, "BMP", new File("./src/main/resources/dotMatrix.bmp"));
+        } catch(IOException e){
+
+        }
+        System.out.println(img);
+    }
+    
+
     public static void main(String[] args) {
        new App().transformImageByColor(255);
        new App().gridCreator(20, 20);
        new App().cropper(0, 200, 200, 200);
+
     }
 
 }
