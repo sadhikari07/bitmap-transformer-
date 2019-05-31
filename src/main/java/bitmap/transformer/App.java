@@ -3,12 +3,39 @@
  */
 package bitmap.transformer;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+    String filePath = "./src/main/resources/LAND2.BMP";
+    public String transformImageByColor(int rgbTobeChangedTo) {
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File(filePath));
+            int height = img.getHeight();
+            int width = img.getWidth();
+            System.out.println("height" + height);
+            System.out.println("width" + width);
+
+            for (int h = 0; h < height; h++) {
+                for (int w = 0; w < width; w++) {
+                    int rgb = img.getRGB(w, h);
+                     img.setRGB(w, h, rgbTobeChangedTo);
+                }
+            }
+            ImageIO.write(img, "BMP", new File("./src/main/resources/newImage.bmp"));
+        } catch (IOException e) {
+        }
+        System.out.println(img);
+        return "image";
     }
 
+    
+
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println(new App().transformImageByColor(255));
     }
+
 }
