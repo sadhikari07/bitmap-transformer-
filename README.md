@@ -30,3 +30,11 @@ Write tests to ensure each function behaves correctly with valid and invalid inp
 
 [Link to Test](https://github.com/sadhikari07/bitmap-transformer-/blob/master/src/test/java/bitmap/transformer/AppTest.java)
 
+
+### Running From Command Line
+
+- ./gradlew run --args 'LANDS2.BMP colorChanged.bmp transformImageByColor(255)'
+- ./gradlew run --args 'LANDS2.BMP gridCreated.bmp gridCreator(20, 20)'
+- ./gradlew run --args 'LANDS2.BMP subImage.bmp cropper(0, 200, 200, 200)'
+- ./gradlew run --args 'LANDS2.BMP dotMatrix.bmp transformImgDotMatrix(255)'
+
