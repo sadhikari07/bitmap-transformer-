@@ -26,7 +26,7 @@ Each @Test method should aim to test a small well defined feature of a function.
 Write tests to ensure each function behaves correctly with valid and invalid inputs.
 
 
-[Link to Code](https://github.com/sadhikari07/java-fundamentals/blob/master/basiclibrary/maps.md)
+[Link to Code](https://github.com/sadhikari07/bitmap-transformer-/blob/master/src/main/java/bitmap/transformer/App.java)
 
-[Link to Test](https://github.com/sadhikari07/java-fundamentals/blob/master/lintr/liner.md)
+[Link to Test](https://github.com/sadhikari07/bitmap-transformer-/blob/master/src/test/java/bitmap/transformer/AppTest.java)
 
