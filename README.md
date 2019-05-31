@@ -38,3 +38,9 @@ Write tests to ensure each function behaves correctly with valid and invalid inp
 - ./gradlew run --args 'LANDS2.BMP subImage.bmp cropper(0, 200, 200, 200)'
 - ./gradlew run --args 'LANDS2.BMP dotMatrix.bmp transformImgDotMatrix(255)'
 
+
+###Resources:
+http://samples.fileformat.info/format/bmp/sample/dc59e50046b84768b5df4191ec16b9c3/LAND2.BMP?AWSAccessKeyId=0V91BEFA7GM093MEVMG2&Signature=GgqAoCAhs6dGzqFb2vk1lbhKzGQ%3D&Expires=1559340811
+
+http://www.java2s.com/Tutorials/Java/Graphics_How_to/Image/Load_a_bitmap_image_and_manipulate_individual_pixels.htm
+
