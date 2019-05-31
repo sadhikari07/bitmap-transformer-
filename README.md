@@ -7,15 +7,22 @@ For this assignment you will be building a bitmap (.bmp) transformer CLI. It wil
 
 ### Minimum requirements:
 The CLI should be architected using best modularization practices.
+
 The CLI should contain a Bitmap class, and reading in a file should create a new Bitmap instance.
+
 The CLI should require at least three arguments: input-file-path output-file-path transfrom-name.
+
 The CLI should support a minimum of four transforms, each of which is an instance method in the Bitmap class.
+
 The CLI should log useful Error messages if used incorrectly.
+
 The CLI should log a success message on completion.
 
 ### Testing
 Use JUnit to define descriptive tests.
+
 Each @Test method should aim to test a small well defined feature of a function.
+
 Write tests to ensure each function behaves correctly with valid and invalid inputs.
 
 
