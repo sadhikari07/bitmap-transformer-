@@ -10,24 +10,26 @@ import java.io.IOException;
 
 public class App {
     String filePath = "./src/main/resources/LAND2.BMP";
-
-    public void transformImageByColor(int rgbTobeChangedTo) {
+    public int transformImageByColor(int rgbTobeChangedTo) {
         BufferedImage img = null;
+        int rgbBefore = 0;
+
         try {
             img = ImageIO.read(new File(filePath));
             int height = img.getHeight();
             int width = img.getWidth();
             System.out.println("height" + height);
             System.out.println("width" + width);
+            rgbBefore = img.getRGB(30,30);
             for (int h = 0; h < height; h++) {
                 for (int w = 0; w < width; w++) {
-                    int rgb = img.getRGB(w, h);
                      img.setRGB(w, h, rgbTobeChangedTo);
                 }
             }
             ImageIO.write(img, "BMP", new File("./src/main/resources/colorChanged.bmp"));
         } catch (IOException e) {
         }
+        return rgbBefore;
     }
     public void gridCreator(int gridX, int gridY) {
         BufferedImage img = null;
