@@ -60,34 +60,6 @@ public class App {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public void transformImgDotMatrix(int rgbToSetDotMatrix){
         BufferedImage img = null;
         try {
@@ -108,13 +80,13 @@ public class App {
         }
         System.out.println(img);
     }
-    
+
 
     public static void main(String[] args) {
        new App().transformImageByColor(255);
        new App().gridCreator(20, 20);
        new App().cropper(0, 200, 200, 200);
-
+       new App().transformImgDotMatrix(255);
     }
 
 }
