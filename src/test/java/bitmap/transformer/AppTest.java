@@ -7,8 +7,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+    @Test public void testAppTransformsColor() {
         App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.transformImageByColor());
-    }
+        int expectedRGB = 255;
+        assertNotEquals("should be equal", 255, classUnderTest.transformImageByColor(255));
+        }
 }
+
+
